@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class CreditCard {
+public class CreditCard implements Valuable{
     String name;
     String accountNumber;
     double balance;
@@ -11,4 +11,8 @@ public class CreditCard {
         this.balance = balance;
     }
 
+    @Override
+    public double getValue() {
+        return 0;
+    }
 }
