@@ -1,6 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.finance;
 
-public class CreditCard implements Valuable{
+public class CreditCard implements Valuable {
     String name;
     String accountNumber;
     double balance;

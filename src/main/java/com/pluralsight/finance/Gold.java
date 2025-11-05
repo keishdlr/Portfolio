@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.finance;
 
 public class Gold extends FixedAsset {
     double weight;
