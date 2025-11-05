@@ -9,8 +9,8 @@ public class FinanceApplication {
         BankAccount account2 = new BankAccount("Gary", 456, 1500);
 
         // try to deposit money into both accounts
-        account1.deposit(100);
-        account2.deposit(100);
+        account1.deposit();
+        account2.deposit();
 
 
     }

@@ -19,7 +19,9 @@ public class Portfolio implements Valuable {
     public void add(Valuable asset) {
         // add assests to a collection
         this.assets = new ArrayList<>();
-        assets.add(asset);
+        assets.add(new House("Brooklyn Loft", 950000.00, 2000,500,2));
+        assets.add(new House("Miami Condo", 675000.00, 1960, 600, 3));
+
     }
 
     @Override
