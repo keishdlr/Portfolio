@@ -11,8 +11,19 @@ public class CreditCard implements Valuable {
         this.balance = balance;
     }
 
+    double amount = 0;
+    public double charge(){
+        balance += amount;
+        return balance;
+    }
+
+    public double pay(){
+        balance -= amount;
+        return balance;
+    }
+
     @Override
     public double getValue() {
-        return 0;
+        return -balance;
     }
 }
