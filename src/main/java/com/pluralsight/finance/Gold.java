@@ -8,4 +8,11 @@ public class Gold extends FixedAsset {
         this.weight = weight;
     }
 
+    @Override
+
+    public double getValue() {
+
+        marketValue = weight * 12000;
+        return marketValue;
+    }
 }

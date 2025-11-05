@@ -10,6 +10,8 @@ public class BankAccount implements Valuable {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
+
+    double amount = 0;
     public double deposit(){
         balance += amount;
         return balance;

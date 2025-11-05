@@ -11,4 +11,13 @@ public class House extends FixedAsset {
         this.squareFeet = squareFeet;
         this.bedrooms = bedrooms;
     }
+
+    @Override
+    public double getValue() {
+
+        double m = (double) (squareFeet * 350);
+        marketValue = m + (bedrooms * 500);
+
+        return marketValue;
+    }
 }
