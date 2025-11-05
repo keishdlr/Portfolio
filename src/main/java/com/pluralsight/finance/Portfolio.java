@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Portfolio {
+public class Portfolio implements Valuable {
 
     String name;
     String owner;
@@ -16,35 +16,29 @@ public class Portfolio {
         this.owner = owner;
     }
 
-    public static void add() {
-    // add all of the assest to a collection
-        List<Person> Family = new ArrayList<Person>();
-
-        Family.add(new Person("Elena", "Marquez"));
-        Family.add(new Person("Darius", "Nguyen"));
-        Family.add(new Person("Zuri", "Patel"));
-        Family.add(new Person("Nova", "Kim"));
-        Family.add(new Person("Kai", "Thompson"));
-        Family.add(new Person("Luna", "Marquez"));
-        Family.add(new Person("Orion", "Patel"));
-        Family.add(new Person("Milo", "Patel"));
-
+    public void add(Valuable asset) {
+        // add assests to a collection
+        this.assets = new ArrayList<>();
+        assets.add(asset);
     }
 
     @Override
     public double getValue() {
-       total = Collections.addAll(assets);
+        double total = 0;
+        for (Valuable asset : assets) {
+            total += asset.getValue();
+        }
         return total;
     }
 
     public double getMostValuable() {
-        hghestValue = Collections.max(assets);
-        return highestValue ;
+        Valuable mostValuable = Collections.max(assets, Comparator.comparingDouble(Valuable::getValue));
+        return mostValuable.getValue();
     }
 
     public double getLeastValuable() {
-       leastValue = Collections.min(assets);
-        return leastValue;
+        Valuable leastValuable = Collections.min(assets, Comparator.comparingDouble(Valuable::getValue));
+        return leastValuable.getValue();
     }
 
 }
